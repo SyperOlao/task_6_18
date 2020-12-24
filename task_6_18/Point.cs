@@ -14,6 +14,7 @@ namespace task_6_18
 
         public double X { get; set; }
         public double Y { get; set; }
+
         public HashSet<Triangle> AdjacentTriangles { get; set; } = new HashSet<Triangle>();
 
         public Point(double x, double y)

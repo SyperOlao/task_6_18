@@ -26,6 +26,7 @@ namespace task_6_18
             string[] temp_Y = textBox3.Text.Split(' ');
             for (int i = 0; i < points.Length; i++)
             {
+                points[i] = new Point();
                 points[i].X = double.Parse(temp_X[i]);
                 points[i].Y = double.Parse(temp_Y[i]);
             }
@@ -38,8 +39,8 @@ namespace task_6_18
             DrawTriangulation(triangulation);
 
             // figures.setRadious(AmountOfPoints);
-            figures.setColor(Color.Blue);
-            figures.setPoints(points);
+            figures.SetColor(Color.Blue);
+            figures.SetPoints(points);
 
             figures.DrawFigure(graphics);
         }

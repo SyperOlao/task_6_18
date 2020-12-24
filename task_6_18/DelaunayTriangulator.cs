@@ -15,7 +15,9 @@ namespace task_6_18
         public IEnumerable<Point> GeneratePoints(int amount, Point []points)
         {
             // TODO make more beautiful
-            var lines = new List<Line>(); 
+            MaxX = points[0].X;
+            MaxY = points[2].Y; 
+            
             var pointsList = new List<Point>();
             foreach(Point p in points)
             {

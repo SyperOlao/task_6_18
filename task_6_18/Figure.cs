@@ -22,12 +22,12 @@ namespace task_6_18
             }
         }
 
-        public void setColor(Color color)
+        public void SetColor(Color color)
         {
             this.color = color;
         }
 
-        public void setPoints(Point[] points)
+        public void SetPoints(Point[] points)
         {
             this.points = points;
         }

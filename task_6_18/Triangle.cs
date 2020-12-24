@@ -32,8 +32,6 @@ namespace task_6_18
 
         public Triangle(Point point1, Point point2, Point point3)
         {
-            // In theory this shouldn't happen, but it was at one point so this at least makes sure we're getting a
-            // relatively easily-recognised error message, and provides a handy breakpoint for debugging.
             if (point1 == point2 || point1 == point3 || point2 == point3)
             {
                 throw new ArgumentException("Must be 3 distinct points");
