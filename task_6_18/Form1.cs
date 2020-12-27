@@ -73,7 +73,7 @@ namespace task_6_18
                 float X2 = (float)edge.Point2.X;
                 float Y1 = (float)edge.Point1.Y;
                 float Y2 = (float)edge.Point2.Y;
-                graphics.DrawLine(new Pen(Color.LightBlue, 2), X1, Y1, X2, Y2);
+                graphics.DrawLine(new Pen(Color.LightSkyBlue, 3), X1, Y1, X2, Y2);
                 
             }
         }

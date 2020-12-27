@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace task_6_18
 {
-    public class Line
+    public class Line 
     {
         Point point1;
         Point point2;

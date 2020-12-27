@@ -10,21 +10,29 @@ namespace task_6_18
     {
         private double MaxX { get; set; }
         private double MaxY { get; set; }
-        private int border;
+        private IEnumerable<Triangle> border;
 
         public IEnumerable<Point> GeneratePoints(int amount, Point []points)
         {
-            // TODO make more beautiful
-            MaxX = points[0].X;
-            MaxY = points[2].Y; 
+         
+            MaxX = MaxPointX(points);
+            MaxY = MinPointY(points); 
             
             var pointsList = new List<Point>();
+            var triangle = new List<Triangle>(); 
+
             foreach(Point p in points)
             {
                 pointsList.Add(p);
             }
-            
-            border = points.Length;
+
+            for (int i = 0, k = 1, z = 2; i < points.Length; i++, k++, z++)
+            {
+                triangle.Add(new Triangle(points[i], points[k], points[z]));
+                if (k == points.Length - 1) k = -1;
+                if (z == points.Length - 2) z = -1;
+            }
+            border = triangle; 
 
             var random = new Random();
             for (int i = 0; i < amount - 4; i++)
@@ -63,8 +71,31 @@ namespace task_6_18
                 }
             }
 
-            //triangulation.RemoveWhere(o => o.Vertices.Any(v => supraTriangle.Vertices.Contains(v)));
             return triangulation;
+        }
+        private static double MaxPointX(Point[] point)
+        {
+            double max = 0;
+            for (int i = 0; i < point.Length; i++)
+            {
+                if(point[i].X > max)
+                {
+                    max = point[i].X;
+                }
+            }
+            return max; 
+        }
+        private static double MinPointY(Point[] point)
+        {
+            double min = point[0].Y;
+            for (int i = 1; i < point.Length; i++)
+            {
+                if (point[i].Y < min)
+                {
+                    min = point[i].Y;
+                }
+            }
+            return min;
         }
 
         private List<Edge> FindHoleBoundaries(ISet<Triangle> badTriangles)

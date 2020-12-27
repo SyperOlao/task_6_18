@@ -9,6 +9,7 @@ namespace task_6_18
     public class Triangle
     {
         public Point[] Vertices { get; } = new Point[3];
+        public Point[] lines { get; } = new Point[2];
         public Point Circumcenter { get; private set; }
         public double RadiusSquared;
 

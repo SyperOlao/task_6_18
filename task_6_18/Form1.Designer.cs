@@ -65,7 +65,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(129, 22);
             this.textBox1.TabIndex = 2;
-            this.textBox1.Text = "4";
+            this.textBox1.Text = "7";
             // 
             // textBox2
             // 
@@ -73,7 +73,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(129, 22);
             this.textBox2.TabIndex = 3;
-            this.textBox2.Text = "20 20 300 300";
+            this.textBox2.Text = "20 100 150 170 300 320 170";
             // 
             // textBox3
             // 
@@ -81,7 +81,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(129, 22);
             this.textBox3.TabIndex = 4;
-            this.textBox3.Text = "30 300 300 30";
+            this.textBox3.Text = "50 20 50 100 30 300 320";
             // 
             // label2
             // 
